@@ -18,7 +18,7 @@ export function Contact() {
     event.preventDefault()
     const formData = new FormData()
     for (const name in formDetails) {
-      formData.append(name, formDetails[name])
+      formData.append(name, formDetails[name as keyof typeof formDetails])
     }
     try {
       const response = await fetch('https://devform.vercel.app/api/submit/86', {
