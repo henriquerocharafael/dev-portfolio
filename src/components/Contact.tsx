@@ -26,6 +26,7 @@ export function Contact() {
         body: formData,
       })
       const result = await response.json()
+      console.log(result)
       setSubmitted(true)
     } catch (event) {
       console.log(event)
