@@ -24,7 +24,6 @@ export function Contact() {
       const response = await fetch('https://devform.vercel.app/api/submit/86', {
         method: 'POST',
         body: formData,
-        // contentType: 'application/json'
       })
       const result = await response.json()
       setSubmitted(true)
