@@ -1,17 +1,17 @@
 import { useState } from "react"
 
 export function Contact() {
-  const initialState = { 
-    name: "", 
-    email: "", 
-    message: "" 
+  const initialState = {
+    name: "",
+    email: "",
+    message: ""
   }
 
   const [formDetails, setFormDetails] = useState(initialState)
   const [submitted, setSubmitted] = useState(false)
 
   function onValueChange(fieldName: string, value: string) {
-    setFormDetails({...formDetails, [fieldName]: value})
+    setFormDetails({ ...formDetails, [fieldName]: value })
   }
 
   async function handleSubmit(event: React.ChangeEvent<HTMLFormElement>) {
@@ -43,29 +43,29 @@ export function Contact() {
           Interested in working together? Contact me at <a href="mailto:rafaelrocha2500@gmail.com">rafaelrocha2500@gmail.com</a>
         </p>
         <form onSubmit={handleSubmit} className="mt-3 flex flex-col gap-6">
-          <input 
-            type="text" 
-            placeholder="your name" 
-            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full" 
+          <input
+            type="text"
+            placeholder="your name"
+            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full"
             value={formDetails.name}
             onChange={(event) => onValueChange('name', event.target.value)}
           />
-          <input 
-            type="email" 
-            placeholder="your email" 
-            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full" 
+          <input
+            type="email"
+            placeholder="your email"
+            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full"
             value={formDetails.email}
             onChange={(event) => onValueChange('email', event.target.value)}
           />
-          <textarea 
-            placeholder="your message" 
+          <textarea
+            placeholder="your message"
             rows={4}
-            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full" 
+            className="text-md bg-background rounded-xl px-4 py-3 placeholder-opacity-50 focus:outline-none border w-full"
             value={formDetails.message}
             onChange={(event) => onValueChange('message', event.target.value)}
           />
           {submitted ? <p className="text-green-600">Your message has been sent!</p> : null}
-          <button className="bg-primary text-white" type="submit">Send</button>
+          <button className="bg-primary hover:bg-blue-500 text-white" type="submit">Send</button>
         </form>
       </div>
     </section>

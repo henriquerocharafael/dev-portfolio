@@ -1,15 +1,15 @@
 import { ChevronRight } from "lucide-react"
 
-interface ProjectCardProps {
+export interface ProjectCardProps {
   name: string
   description: string
-  url: string
-  imgUrl: string
+  html_url: string
+  imgUrl?: string
 }
 
-export function ProjectCard({ name, description, url, imgUrl }: ProjectCardProps) {
+export function ProjectCard({ name, description, html_url, imgUrl }: ProjectCardProps) {
   return (
-    <a href={url} target='_blank' className='flex items-center border-b py-8 px-2 rounded-md gap-4 group/item hover:bg-slate-100 mt-1'>
+    <a href={html_url} target='_blank' className='flex items-center border-b py-8 px-2 rounded-md gap-4 group/item hover:bg-slate-100 mt-1'>
       <img
         src={imgUrl}
         alt={name}

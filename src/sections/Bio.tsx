@@ -3,7 +3,7 @@ import { Linkedin, AtSign, GitBranch } from "lucide-react"
 export function Bio() {
   return (
     <section className="bg-white text-center md:text-left rounded-xl p-2 md:p-5 shadow-md">
-      <img className="h-32 w-32 rounded-full mx-auto md:mx-0" src="/profile-pic.png" alt="profile picture" />
+      <img className="h-32 w-32 rounded-full mx-auto md:mx-0" src="/profile-pic.jpeg" alt="profile picture" />
       <h1 className="text-lg md:text-2xl font-bold mt-3">Dev Webdecoded</h1>
       <p className="text-secondary-foreground py-2">I'm a Senior Full-Stack Engineer.</p>
 
